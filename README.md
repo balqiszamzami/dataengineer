@@ -103,5 +103,7 @@ Query ini menghitung:
 
 # Other Documentation
 
+
+## [spreadsheet](https://docs.google.com/spreadsheets/d/1CEZBpHCfLSWEUVoiJ9Nt29oUcru66k-vZ_HTeukbDmc/edit?usp=sharing)
 ![Docker](captures/docker.png)
 ![Tables](captures/tables.png)
