@@ -43,10 +43,11 @@ def main():
     print(df.to_string(index=False))
 
     # Simpan ke Excel
-    output = Path(__file__).parent.parent / "dataset" / "monthlysalesreport.xlsx"
+    output = Path(__file__).parent / "dataset" / "monthlysalesreport.xlsx"
     df.to_excel(output, index=False)
     log.info(f"Laporan disimpan: {output}")
 
 
 if __name__ == "__main__":
+
     main()
