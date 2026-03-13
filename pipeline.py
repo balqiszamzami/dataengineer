@@ -25,7 +25,7 @@ DB_CONFIG = {
     "password": os.getenv("DB_PASSWORD", "postgres"),
 }
 
-CSV_PATH = Path(__file__).parent.parent / "dataset" / "DATASETTechnicalTestDataEngineer.csv"
+CSV_PATH = Path(__file__).parent / "dataset" / "DATASETTechnicalTestDataEngineer.csv"
 
 
 # Helper
@@ -265,4 +265,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
