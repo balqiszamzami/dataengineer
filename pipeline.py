@@ -144,7 +144,7 @@ def transform(df: pd.DataFrame):
 
 # Load
 def run_migrations(conn):
-    migration_dir = Path(__file__).parent.parent / "migrations"
+    migration_dir = Path(__file__).parent / "migrations"
     for sql_file in sorted(migration_dir.glob("*.sql")):
         log.info(f"[MIGRATE] {sql_file.name}")
         with conn.cursor() as cur:

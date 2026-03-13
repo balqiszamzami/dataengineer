@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS dimoutlet (outlet_id SERIAL PRIMARY KEY, outlet_code VARCHAR(50) NOT NULL UNIQUE, outlet_name VARCHAR(200) NOT NULL, created_at TIMESTAMP DEFAULT NOW());
+CREATE TABLE IF NOT EXISTS dimproduct (product_id SERIAL PRIMARY KEY, product_code VARCHAR(20) NOT NULL UNIQUE, product_name VARCHAR(200) NOT NULL, created_at TIMESTAMP DEFAULT NOW());
+CREATE TABLE IF NOT EXISTS factsales (id SERIAL PRIMARY KEY, sales_period DATE NOT NULL, outlet_id INT NOT NULL REFERENCES dimoutlet(outlet_id), product_id INT NOT NULL REFERENCES dimproduct(product_id), qty INT NOT NULL, product_price NUMERIC(14,2) NOT NULL, actual_sales NUMERIC(14,2) NOT NULL, created_at TIMESTAMP DEFAULT NOW());
+CREATE TABLE IF NOT EXISTS pipelinerejectedrows (id SERIAL PRIMARY KEY, raw_data TEXT, reject_reason VARCHAR(255), rejected_at TIMESTAMP DEFAULT NOW());
