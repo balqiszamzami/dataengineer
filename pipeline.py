@@ -18,11 +18,11 @@ log = logging.getLogger(__name__)
 
 # Konfigurasi database
 DB_CONFIG = {
-    "host":     os.getenv("DB_HOST",     "localhost"),
-    "port":     int(os.getenv("DB_PORT", "5432")),
-    "dbname":   os.getenv("DB_NAME",     "sales_db"),
-    "user":     os.getenv("DB_USER",     "postgres"),
-    "password": os.getenv("DB_PASSWORD", "postgres"),
+    "host":     "localhost",
+    "port":     5432,
+    "dbname":   "sales_db",
+    "user":     "postgres",
+    "password": "postgres",
 }
 
 CSV_PATH = Path(__file__).parent / "dataset" / "DATASETTechnicalTestDataEngineer.csv"
@@ -267,3 +267,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
